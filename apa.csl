@@ -23,6 +23,11 @@
 	<contributor>
 	  <name>Sebastian Karcher</name>
 	</contributor>
+	<contributor>
+	  <name>Libby Hemphill</name>
+	  <email>libbyh@gmail.com</email>
+	  <uri>http://www.libbyh.com</uri>
+	</contributor>
 	<category field="psychology"/>
 	<category field="generic-base"/>
 	<category citation-format="author-date"/>
@@ -161,18 +166,22 @@
   </macro>
   <macro name="title">
 	<choose>
-	  <if type="report thesis" match="any">
-		<text variable="title" font-style="italic"/>
+	  <if type="thesis" match="any">
+		<text variable="title" font-style="italic" text-case="sentence"/>
 		<group prefix=" (" suffix=")">
 		  <text variable="genre"/>
 		  <text variable="number" prefix=" No. "/>
 		</group>
 	  </if>
-	  <else-if type="bill book graphic legal_case motion_picture report song manuscript speech" match="any">
-		<text variable="title" font-style="italic"/>
+		<else-if type="report">
+		<text variable="title" font-style="italic" text-case="sentence"/>
+		<text variable="number" prefix=" (Working paper " suffix=")"/>
+	  </else-if>
+	  <else-if type="bill book graphic legal_case motion_picture song manuscript speech" match="any">
+		<text variable="title" font-style="italic" text-case="sentence"/>
 	  </else-if>
 	  <else>
-		<text variable="title"/>
+		<text variable="title" text-case="sentence"/>
 	  </else>
 	</choose>
   </macro>
