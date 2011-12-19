@@ -3,15 +3,16 @@
   <info>
     <title>OSCOLA - Oxford Standard for Citation of Legal Authorities</title>
     <id>http://www.zotero.org/styles/oscola</id>
-    <link href="http://www.zotero.org/styles/oscola.csl" rel="self"/>
+    <link href="http://www.zotero.org/styles/oscola" rel="self"/>
     <author>
         <name>Virgilio Afonso da Silva (University of Sao Paulo); www.law.usp.br/afonso</name>
     </author>
     <contributor>
        <name>Julian Onions</name>
      </contributor>
+    <category citation-format="note"/>
     <category field="law"/>
-    <updated>2011-02-25T09:00:00+00:00</updated>
+    <updated>2011-07-28T16:01:03+00:00</updated>
     <summary>
 	A still incomplete style (handles only secondary sources) for the OSCOLA standards / 
 	Based on the "chicago-fullnote-bibliography" style, by Julian Onions
@@ -453,6 +454,9 @@
         </group>
       </else-if>
       <else-if type="legal_case"> </else-if>
+      <else-if type="article">
+	<text macro="issued" prefix=" (" suffix=")"/>
+      </else-if>
       <else>
         <text macro="issued" prefix=", "/>
       </else>

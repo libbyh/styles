@@ -3,7 +3,7 @@
    <info>
       <title>Journal of Health Economics</title>
       <id>http://www.zotero.org/styles/journal-of-health-economics</id>
-      <link href="http://www.zotero.org/styles/journal-of-health-economics" rel="documentation"/>
+      <link href="http://www.zotero.org/styles/journal-of-health-economics" rel="self"/>
       <author>
          <name>Keith Kranker</name>
          <uri>http://www.zotero.org/kkranker/11431</uri>
@@ -409,7 +409,7 @@
          </group>
       </layout>
    </citation>
-   <bibliography hanging-indent="true" et-al-min="11" et-al-use-first="7" subsequent-author-substitute="———" entry-spacing="1" line-spacing="0">
+   <bibliography hanging-indent="true" et-al-min="11" et-al-use-first="7" subsequent-author-substitute="———">
       <sort>
          <key macro="contributors"/>
          <key variable="issued"/>

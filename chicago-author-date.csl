@@ -77,11 +77,7 @@
       </choose>
    </macro>
    <macro name="anon">
-      <choose>
-         <if variable="author editor translator" match="none">
-            <text term="anonymous" form="short" text-case="capitalize-first" suffix="." strip-periods="true"/>
-         </if>
-      </choose>
+      <text term="anonymous" form="short" text-case="capitalize-first" suffix="." strip-periods="true"/>
    </macro>
    <macro name="editor">
       <names variable="editor">
@@ -120,9 +116,9 @@
          <substitute>
             <text macro="editor"/>
             <text macro="translator"/>
+            <text macro="anon"/>
          </substitute>
       </names>
-      <text macro="anon"/>
       <text macro="recipient"/>
    </macro>
    <macro name="contributors-short">
@@ -131,9 +127,9 @@
          <substitute>
             <names variable="editor"/>
             <names variable="translator"/>
+            <text macro="anon"/>
          </substitute>
       </names>
-      <text macro="anon"/>
    </macro>
    <macro name="interviewer">
       <names variable="interviewer" delimiter=", ">
@@ -178,11 +174,8 @@
          <else-if type="bill book graphic legal_case motion_picture report song" match="any">
             <text variable="title" font-style="italic"/>
          </else-if>
-         <else-if type="article-journal article-magazine article-newspaper" match="any">
+	 <else>
             <text variable="title" quotes="true"/>
-         </else-if>
-         <else>
-            <text variable="title"/>
          </else>
       </choose>
    </macro>
@@ -389,8 +382,7 @@
                   </if>
                </choose>
                <text macro="publisher"/>
-               <text macro="day-month"/>
-            </group>
+               </group>
          </else>
       </choose>
    </macro>

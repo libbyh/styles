@@ -14,7 +14,7 @@
       <category field="botany"/>
       <updated>2009-07-09T20:21:05+00:00</updated>
       <summary>Style for Oryx: the international journal of conservation</summary>
-      <link href="http://www.oryxthejournal.org/files_for_linking/OryxInstructionsForContributors.pdf" rel="documentation"/><!--To do with CSL1: Citation sort by issued (already specified but not functional), given-name disambiguation(minimal), en-dashes -->
+      <link href="http://www.oryxthejournal.org/files_for_linking/OryxInstructionsForContributors.pdf" rel="documentation"/><!-- en-dashes -->
       <rights>This work is licensed under a Creative Commons Attribution-Share Alike 3.0 License: http://creativecommons.org/licenses/by-sa/3.0/</rights>
    </info>
    <locale xml:lang="en">
@@ -99,7 +99,7 @@
    <macro name="issued">
       <choose>
          <if variable="issued">
-            <group prefix=" " suffix="">
+            <group>
                <date variable="issued">
                   <date-part name="year"/>
                </date>
@@ -161,7 +161,7 @@
          <text variable="locator" prefix=" "/>
       </group>
    </macro>
-   <citation et-al-min="3" et-al-use-first="1" disambiguate-add-year-suffix="true" disambiguate-add-names="true" collapse="year">
+   <citation et-al-min="3" et-al-use-first="1" disambiguate-add-year-suffix="true" disambiguate-add-names="true" collapse="year" disambiguate-add-givenname="true" givenname-disambiguation-rule="by-cite">
       <sort>
          <key variable="issued"/>
          <key macro="author"/>
